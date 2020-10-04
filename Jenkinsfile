@@ -59,7 +59,7 @@ pipeline {
                           def image = docker.build('cruizji/jenkins-course:latest')
                           image.push()
                   """
-                      
+              }     
                   }
               }    
           }
