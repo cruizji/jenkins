@@ -66,7 +66,7 @@ pipeline {
       stage('Run Trivy') {
                steps {
                    sh(script: """
-                     sudo trivy cruizji/jenkins-course
+                      trivy cruizji/jenkins-course
                    """)
                    }
                }
