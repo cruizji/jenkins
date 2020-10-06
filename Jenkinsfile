@@ -60,15 +60,14 @@ pipeline {
                           image.push()                 
                      }     
                   }
-
-       stage('Run Trivy') {
-           steps {
-                  sleep(time: 30, unit: 'SECONDS')
-                   sh(script: """
-                   trivy cruizji/jenkins-course
-                   """)
-               }
-            }
+//       stage('Run Trivy') {
+//           steps {
+//                  sleep(time: 30, unit: 'SECONDS')
+ //                  sh(script: """
+ //                  trivy cruizji/jenkins-course
+ //                  """)
+ //              }
+ //           }
    
               }    
           }
