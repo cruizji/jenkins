@@ -48,7 +48,7 @@ pipeline {
                 sh """
                 docker-compose down
                 """
-            }
+            } 
       }     
       stage('Push Container') {
           steps {
@@ -60,14 +60,14 @@ pipeline {
                           image.push()                 
                      }     
                   }
-//       stage('Run Trivy') {
-//           steps {
-//                  sleep(time: 30, unit: 'SECONDS')
- //                  sh(script: """
- //                  trivy cruizji/jenkins-course
- //                  """)
- //              }
- //           }
+       stage('Run Trivy') {
+           steps {
+                  sleep(time: 30, unit: 'SECONDS')
+                  sh  """
+                   trivy cruizji/jenkins-course
+                    """
+               }
+           }
    
               }    
           }
