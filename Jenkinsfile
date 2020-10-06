@@ -62,9 +62,9 @@ pipeline {
                   }
        stage('Run Trivy') {
            steps {
-                   sh  """
-                   trivy cruizji/jenkins-course
-                    """
+            //       sh  """
+            //       trivy cruizji/jenkins-course
+            //        """
                }
            }
    
