@@ -64,18 +64,18 @@ pipeline {
          parallel {
             stage('Run Anchore') {
                steps {
-                  pwsh(script: """
-                     Write-Output "blackdentech/jenkins-course" > anchore_images
-                  """)
-                  anchore bailOnFail: false, bailOnPluginFail: false, name: 'anchore_images'
+               //   pwsh(script: """
+                 //    Write-Output "blackdentech/jenkins-course" > anchore_images
+                  //""")
+                  //anchore bailOnFail: false, bailOnPluginFail: false, name: 'anchore_images'
                }
             }
             stage('Run Trivy') {
                steps {
                   sleep(time: 30, unit: 'SECONDS')
-                  // sh(script: """
-                  // trivy cruizji/jenkins-course
-                  // """)
+                   sh(script: """
+                   trivy cruizji/jenkins-course
+                   """)
                }
             }
          }
