@@ -60,13 +60,7 @@ pipeline {
                           image.push()                 
                      }     
                   }
-   //    stage('Run Trivy') {
-   //        steps {
-            //       sh  """
-            //       trivy cruizji/jenkins-course
-            //        """
-   //            }
-   //        }
+
    
               }    
           }
