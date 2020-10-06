@@ -71,8 +71,8 @@ pipeline {
        
        //      }
        //     }
-            stage('Run Trivy') {
-               steps {
+       stage('Run Trivy') {
+           steps {
                   sleep(time: 30, unit: 'SECONDS')
                    sh(script: """
                    trivy cruizji/jenkins-course
