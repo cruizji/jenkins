@@ -66,6 +66,9 @@ pipeline {
       stage('Run Trivy') {
                steps {
                   sleep(time: 30, unit: 'SECONDS')
+                  sh """
+                    sudo trivy cruizji/jenkins-course
+                   """
                }
       }
    }
